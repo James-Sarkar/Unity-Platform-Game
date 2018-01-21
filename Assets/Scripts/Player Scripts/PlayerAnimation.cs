@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour {
 
-	float run_SpeedScale = 1f, walk_SpeedScale = 1f;
-
-	// Private variables
 	private Animation anim;
+
+	private float runSpeedScale = 1f, walkSpeedScale = 1f;
 
 	private string runClip = "run", walkClip = "walk", idleClip = "idle", ledgefallClip = "ledgefall", jumpClip = "jump",
 	jumpFallClip = "jumpfall", jumpLandClip = "jumpland", jetpackJumpClip = "jetpackjump", wallJumpClip = "walljump",
@@ -69,8 +68,8 @@ public class PlayerAnimation : MonoBehaviour {
 			anim.Blend (runClip, 0f, 0.3f);
 		}
 
-		anim [runClip].normalizedSpeed = run_SpeedScale;
-		anim [walkClip].normalizedSpeed = walk_SpeedScale;
+		anim [runClip].normalizedSpeed = runSpeedScale;
+		anim [walkClip].normalizedSpeed = walkSpeedScale;
 
 		if (playerController.IsJumping ()) {
 			if (playerController.IsControlledDescent ()) {

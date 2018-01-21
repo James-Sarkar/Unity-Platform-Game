@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	// Public variables
 	public float walkSpeed = 3f, trotSpeed = 5f, runSpeed = 8f, inAirControlAcceleration = 3f, jumpHeight = 0.5f,
 	extraJumpHeight = 2.5f, gravity = 20f, controlledDescentGravity = 2f, speedSmoothing = 80f, rotateSpeed = 700f,
 	trotAfterSeconds = 0.3f;
 
-	// Private variables
 	private bool canJump = true, canControlDescent = true, jumping, jumpingReachedApex, movingBack, isMoving,
 	slammed, isControllable = true;
 

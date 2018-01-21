@@ -37,8 +37,9 @@ public class JetpackParticlesController : MonoBehaviour {
 	IEnumerator StartEmission() {
 		while (true) {
 			if (playerController.IsJumping ()) {
-				if (!audioManager.isPlaying)
+				if (!audioManager.isPlaying) {
 					audioManager.Play ();
+				}
 			} else {
 				audioManager.Stop ();
 			}
