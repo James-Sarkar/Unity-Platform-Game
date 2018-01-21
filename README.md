@@ -1,2 +1,2 @@
-# Unity-Platformer-Game
-A sci-fi platformer game implemented in Unity3d
+# Unity-Platform-Game
+A sci-fi platform game implemented in Unity3d
