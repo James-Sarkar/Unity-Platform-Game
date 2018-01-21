@@ -136,6 +136,9 @@ public class EnemyController : MonoBehaviour {
 					slamDirection.x = -1f;
 				}
 
+				target.SendMessage ("SlamInfo", transform.TransformDirection(slamDirection));
+				target.SendMessage ("ApplyDamage", damage);
+
 				lastPunchTime = Time.time;
 			}
 
