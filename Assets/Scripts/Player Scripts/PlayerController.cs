@@ -128,7 +128,8 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 
-			float curSmooth = speedSmoothing * Time.deltaTime, targetSpeed = Mathf.Min (targetDirection.magnitude, 1.0f);
+			float curSmooth = speedSmoothing * Time.deltaTime, targetSpeed = 
+				Mathf.Min (targetDirection.magnitude, 1.0f);
 
 			if (Input.GetButton ("Fire3")) {
 				targetSpeed *= runSpeed;

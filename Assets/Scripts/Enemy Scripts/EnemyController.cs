@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-	public float attackTurnTime = 0.7f, attackDistance = 17f, attackSpeed = 5f, attackRotateSpeed = 20f, rotateSpeed = 120f,
-	extraRunTime = 2f, idleTime = 1.6f, punchRadius = 1.1f;
+	public float attackTurnTime = 0.7f, attackDistance = 17f, attackSpeed = 5f, attackRotateSpeed = 20f,
+	rotateSpeed = 120f, extraRunTime = 2f, idleTime = 1.6f, punchRadius = 1.1f;
 
 	public Vector3 punchPosition = new Vector3 (0.4f, 0f, 0.7f);
 
