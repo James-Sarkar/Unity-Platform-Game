@@ -109,7 +109,8 @@ public class CameraFollow : MonoBehaviour {
 
 		offset.y = 0f;
 
-		float currentDistance = offset.magnitude, targetAngle = target.eulerAngles.y, currentAngle = transform.eulerAngles.y;
+		float currentDistance = offset.magnitude, targetAngle = target.eulerAngles.y,
+		currentAngle = transform.eulerAngles.y;
 
 		currentAngle = Mathf.SmoothDampAngle (currentAngle, targetAngle, ref velocity.x, snapLag);
 
@@ -119,7 +120,8 @@ public class CameraFollow : MonoBehaviour {
 
 		newPosition += Quaternion.Euler (0f, currentAngle, 0f) * Vector3.back * currentDistance;
 
-		newPosition.y = Mathf.SmoothDamp (transform.position.y, targetCenter.y + height, ref velocity.y, smoothLag, maxSpeed);
+		newPosition.y = Mathf.SmoothDamp (transform.position.y, targetCenter.y + height, ref velocity.y, 
+			smoothLag, maxSpeed);
 
 		transform.position = newPosition;
 
