@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour {
 
 			if (jumping) {
 				jumping = false;
+
 				SendMessage ("DidLand");
 			}
 		}
