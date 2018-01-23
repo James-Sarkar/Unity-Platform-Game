@@ -5,9 +5,11 @@ using UnityEngine;
 public class Respawn : MonoBehaviour {
 
 	public AudioClip sfxPlayerRespawn, sfxRespawnActivate, sfxRespawnActiveLoop;
+
 	public float sfxVolume = 1f;
 
-	private ParticleEmitter activeEmitter, inactiveEmitter, respawnEmitter0, respawnEmitter1, respawnEmitter2, respawnEmitter3;
+	private ParticleEmitter activeEmitter, inactiveEmitter, respawnEmitter0, respawnEmitter1, respawnEmitter2,
+	respawnEmitter3;
 
 	private Light respawnLight;
 
