@@ -51,7 +51,9 @@ public class PlayerHealth : MonoBehaviour {
 
 			health = maxHealth;
 
-			Vector3 respawnPos = GameObject.Find ("Respawn0").transform.position;
+			string respawnPosName = "";
+
+			Vector3 respawnPos = ClosestRespawnPoint (ref respawnPosName);
 
 			Camera.main.transform.position = respawnPos - (transform.forward * 4) + Vector3.up;
 
@@ -62,7 +64,44 @@ public class PlayerHealth : MonoBehaviour {
 			yield return new WaitForSeconds (1.6f);
 
 			SendMessage ("ShowPlayer");
+
+			GameObject.Find (respawnPosName).GetComponent<Respawn> ().ActivateFireFX ();
 		}
+	}
+
+	Vector3 ClosestRespawnPoint (ref string name) {
+		Vector3 respawn0Pos = GameObject.Find ("Respawn0").transform.position,
+		respawn1Pos = GameObject.Find ("Respawn1").transform.position,
+		respawn2Pos = GameObject.Find ("Respawn2").transform.position,
+		respawn3Pos = GameObject.Find ("Respawn3").transform.position,
+		respawnPos = Vector3.zero;
+
+		float respawn0Distance = Vector3.Distance (transform.position, respawn0Pos),
+		respawn1Distance = Vector3.Distance (transform.position, respawn1Pos),
+		respawn2Distance = Vector3.Distance (transform.position, respawn2Pos),
+		respawn3Distance = Vector3.Distance (transform.position, respawn3Pos),
+		minRespawnDistance = Mathf.Min (Mathf.Min (respawn0Distance, respawn1Distance), 
+			Mathf.Min (respawn2Distance, respawn3Distance));
+
+		if (Mathf.Approximately(minRespawnDistance, respawn0Distance)) {
+			name = "Respawn0";
+
+			return respawn0Pos;
+		} else if (Mathf.Approximately(minRespawnDistance, respawn1Distance)) {
+			name = "Respawn1";
+
+			return respawn1Pos;
+		} else if (Mathf.Approximately(minRespawnDistance, respawn2Distance)) {
+			name = "Respawn2";
+
+			return respawn2Pos;
+		} else if (Mathf.Approximately(minRespawnDistance, respawn3Distance)) {
+			name = "Respawn3";
+
+			return respawn3Pos;
+		}
+
+		return respawn0Pos;
 	}
 
 	void SlamInfo(Vector3 direction) {

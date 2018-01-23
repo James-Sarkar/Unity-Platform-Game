@@ -73,9 +73,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4966513232083680}
-  - component: {fileID: 114489372979968970}
   - component: {fileID: 135154271620773910}
   - component: {fileID: 82463554059796602}
+  - component: {fileID: 114024272803914634}
   m_Layer: 0
   m_Name: Respawn2
   m_TagString: Untagged
@@ -109,9 +109,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4287680965303132}
-  - component: {fileID: 114747159930096310}
   - component: {fileID: 135134370157718626}
   - component: {fileID: 82907642330080192}
+  - component: {fileID: 114086852133008544}
   m_Layer: 0
   m_Name: Respawn1
   m_TagString: Untagged
@@ -251,9 +251,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4481650382738074}
-  - component: {fileID: 114061801940948132}
   - component: {fileID: 135878919383989818}
   - component: {fileID: 82108932553104066}
+  - component: {fileID: 114746812260082794}
   m_Layer: 0
   m_Name: Respawn0
   m_TagString: Untagged
@@ -355,9 +355,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4481633919192824}
-  - component: {fileID: 114040719222119488}
   - component: {fileID: 135254568176342268}
   - component: {fileID: 82842785919398932}
+  - component: {fileID: 114932687685366736}
   m_Layer: 0
   m_Name: Respawn3
   m_TagString: Untagged
@@ -3849,29 +3849,7 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114040719222119488
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1608901049434206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b95f67424aac408bb1e9153ffd022a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114061801940948132
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1491396170659170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114489372979968970
+--- !u!114 &114024272803914634
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3879,10 +3857,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048575252219028}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b95f67424aac408bb1e9153ffd022a5, type: 3}
+  m_Script: {fileID: 11500000, guid: c0ce184a5260b4d2bb53eb7af5ed3070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114747159930096310
+  sfxPlayerRespawn: {fileID: 8300000, guid: b7130049ed71e4c0c8f9267bad05f696, type: 3}
+  sfxRespawnActivate: {fileID: 8300000, guid: f06362f3d1ac34aceaad8a86f005fb29, type: 3}
+  sfxRespawnActiveLoop: {fileID: 8300000, guid: b62263042018c437eb2aa3ffd70356ac,
+    type: 3}
+  sfxVolume: 1
+--- !u!114 &114086852133008544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -3890,9 +3873,46 @@ MonoBehaviour:
   m_GameObject: {fileID: 1080449901356200}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: c0ce184a5260b4d2bb53eb7af5ed3070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sfxPlayerRespawn: {fileID: 8300000, guid: b7130049ed71e4c0c8f9267bad05f696, type: 3}
+  sfxRespawnActivate: {fileID: 8300000, guid: f06362f3d1ac34aceaad8a86f005fb29, type: 3}
+  sfxRespawnActiveLoop: {fileID: 8300000, guid: b62263042018c437eb2aa3ffd70356ac,
+    type: 3}
+  sfxVolume: 1
+--- !u!114 &114746812260082794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1491396170659170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ce184a5260b4d2bb53eb7af5ed3070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxPlayerRespawn: {fileID: 8300000, guid: b7130049ed71e4c0c8f9267bad05f696, type: 3}
+  sfxRespawnActivate: {fileID: 8300000, guid: f06362f3d1ac34aceaad8a86f005fb29, type: 3}
+  sfxRespawnActiveLoop: {fileID: 8300000, guid: b62263042018c437eb2aa3ffd70356ac,
+    type: 3}
+  sfxVolume: 1
+--- !u!114 &114932687685366736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608901049434206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ce184a5260b4d2bb53eb7af5ed3070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxPlayerRespawn: {fileID: 8300000, guid: b7130049ed71e4c0c8f9267bad05f696, type: 3}
+  sfxRespawnActivate: {fileID: 8300000, guid: f06362f3d1ac34aceaad8a86f005fb29, type: 3}
+  sfxRespawnActiveLoop: {fileID: 8300000, guid: b62263042018c437eb2aa3ffd70356ac,
+    type: 3}
+  sfxVolume: 1
 --- !u!135 &135134370157718626
 SphereCollider:
   m_ObjectHideFlags: 1
