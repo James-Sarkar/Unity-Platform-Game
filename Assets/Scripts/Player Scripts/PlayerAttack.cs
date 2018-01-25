@@ -52,6 +52,8 @@ public class PlayerAttack : MonoBehaviour {
 
 		foreach (GameObject go in enemies) {
 			if (Vector3.Distance (go.transform.position, pos) < punchRadius) {
+				go.SendMessage ("ApplyDamage", damage);
+
 				AudioSource.PlayClipAtPoint (punchSound, transform.position);
 			}
 		}

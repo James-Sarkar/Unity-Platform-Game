@@ -249,9 +249,10 @@ GameObject:
   - component: {fileID: 143855014615401624}
   - component: {fileID: 82698716237239656}
   - component: {fileID: 114497688171194856}
+  - component: {fileID: 114989736543023026}
   m_Layer: 0
   m_Name: Copper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,6 +1138,22 @@ MonoBehaviour:
   damage: 1
   idleSound: {fileID: 8300000, guid: 6bad9ed9fc023404e8eaaabd6d2db940, type: 3}
   attackSound: {fileID: 8300000, guid: ec6d06a944c104b588b33b0fba457df6, type: 3}
+--- !u!114 &114989736543023026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443709694505534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea71bfe03e0c6415faed537762b59902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  explosionPrefab: {fileID: 100006, guid: e1ed15a74c53c40d195f54f739be7206, type: 2}
+  deadModelPrefab: {fileID: 100048, guid: 30b4bf2d788ee40c1ae72668b63bec96, type: 2}
+  healthCollectable: {fileID: 1734326612711512, guid: ac1ea197a7f5c415e85aac476e358c00,
+    type: 2}
 --- !u!137 &137969020088059908
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
