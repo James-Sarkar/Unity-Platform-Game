@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour {
 		}
 	}
 
-	void Die() {
+	void Die () {
 		GameObject deadModel = Instantiate (deadModelPrefab, transform.position, Quaternion.identity),
 		explosionFX = Instantiate (explosionPrefab, transform.position, Quaternion.identity);
 

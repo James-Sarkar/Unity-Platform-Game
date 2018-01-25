@@ -28,7 +28,7 @@ public class PlayerAttack : MonoBehaviour {
 		playerController = GetComponent<PlayerController> ();
 	}
 
-	void Start() {
+	void Start () {
 		anim [punchClip].speed = punchSpeed;
 	}
 
@@ -41,7 +41,7 @@ public class PlayerAttack : MonoBehaviour {
 		}
 	}
 
-	IEnumerator DidPunch() {
+	IEnumerator DidPunch () {
 		anim.CrossFadeQueued (punchClip, 0.1f, QueueMode.PlayNow);
 
 		yield return new WaitForSeconds (punchHitTime);
