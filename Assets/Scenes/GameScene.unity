@@ -2254,6 +2254,15 @@ Prefab:
       propertyPath: m_Name
       value: Copper 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1443709694505534, guid: 819d15fe25a1f44d5ae8535d65cc655d, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497688171194856, guid: 819d15fe25a1f44d5ae8535d65cc655d,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819d15fe25a1f44d5ae8535d65cc655d, type: 2}
   m_IsPrefabParent: 0
@@ -2481,6 +2490,10 @@ Prefab:
     - target: {fileID: 1443709694505534, guid: 819d15fe25a1f44d5ae8535d65cc655d, type: 2}
       propertyPath: m_Name
       value: Copper 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443709694505534, guid: 819d15fe25a1f44d5ae8535d65cc655d, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 819d15fe25a1f44d5ae8535d65cc655d, type: 2}

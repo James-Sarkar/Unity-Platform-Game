@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 114255448762357196}
   - component: {fileID: 114849743921861516}
   - component: {fileID: 114746077411075972}
+  - component: {fileID: 114862899148020034}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2609,6 +2610,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744d5d74181004d19854262a4daefb9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114862899148020034
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251423692467622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bb04f548ffa469aa768c8a6093232b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punchSpeed: 1
+  punchHitTime: 0.15
+  punchTime: 0.25
+  punchRadius: 1.3
+  damage: 1
+  punchPosition: {x: 0, y: 0, z: 0.8}
+  punchSound: {fileID: 8300000, guid: 5967f799f913844a5bc071e94868c7d4, type: 3}
 --- !u!114 &114975323362709862
 MonoBehaviour:
   m_ObjectHideFlags: 1
