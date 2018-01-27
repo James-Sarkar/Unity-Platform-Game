@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour {
 	private bool fellDown;
 
 	void Start () {
-		
+		GameplayController.instance.SetLife (health);
 	}
 
 	// Update is called once per frame
@@ -118,13 +118,13 @@ public class PlayerHealth : MonoBehaviour {
 
 			AudioSource.PlayClipAtPoint (pickUpHealth, transform.position);
 
-//			GameplayController.instance.SetLife (health);
+			GameplayController.instance.SetLife (health);
 		}
 
 		if (target.tag == "Fuel") {
 			Destroy (target.gameObject);
 
-//			GameplayController.instance.FuelCollected ();
+			GameplayController.instance.FuelCollected ();
 
 			AudioSource.PlayClipAtPoint (pickUpFuel, transform.position);
 		}

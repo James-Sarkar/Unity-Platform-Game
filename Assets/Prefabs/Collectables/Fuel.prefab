@@ -37,6 +37,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4552387707779600}
   - component: {fileID: 65907948198871866}
+  - component: {fileID: 114399182060535640}
+  - component: {fileID: 114411054871270736}
+  - component: {fileID: 114313398578288328}
   m_Layer: 0
   m_Name: Fuel
   m_TagString: Fuel
@@ -196,3 +199,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.6, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114313398578288328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377408331646740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53894c90542bd4035bc675d532f64dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114399182060535640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377408331646740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53894c90542bd4035bc675d532f64dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114411054871270736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1377408331646740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53894c90542bd4035bc675d532f64dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
