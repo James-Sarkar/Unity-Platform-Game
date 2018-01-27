@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour {
 		StartCoroutine (Idle ());
 	}
 
-	IEnumerator Idle() {
+	IEnumerator Idle () {
 		if (audioManager.clip != idleSound) {
 			PlaySoundClip (idleSound);
 		}
@@ -65,14 +65,14 @@ public class EnemyController : MonoBehaviour {
 			Vector3 offset = transform.position - target.position;
 
 			if (offset.magnitude < attackDistance) {
-				StartCoroutine (Attack());
+				StartCoroutine (Attack ());
 			
 				break;
 			}
 		}
 	}
 
-	IEnumerator Attack() {
+	IEnumerator Attack () {
 		isAttacking = true;
 
 		if (audioManager.clip != attackSound) {

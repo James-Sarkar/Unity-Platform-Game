@@ -20,7 +20,7 @@ public class PlayerAnimation : MonoBehaviour {
 		playerController = GetComponent<PlayerController> ();
 	}
 
-	void Start() {
+	void Start () {
 		anim.wrapMode = WrapMode.Loop;
 
 		anim [runClip].layer = -1;
@@ -86,11 +86,11 @@ public class PlayerAnimation : MonoBehaviour {
 		}
 	}
 
-	void DidLand() {
+	void DidLand () {
 		anim.Play (jetpackJumpClip);
 	}
 
-	void DidButtStomp() {
+	void DidButtStomp () {
 		anim.CrossFade (buttstompClip, 0.1f);
 		anim.CrossFadeQueued (jumpLandClip, 0.2f);
 	}

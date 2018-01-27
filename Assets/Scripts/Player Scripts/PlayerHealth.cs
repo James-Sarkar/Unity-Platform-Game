@@ -23,11 +23,13 @@ public class PlayerHealth : MonoBehaviour {
 				fellDown = true;
 
 				health--;
+
+				StartCoroutine (Die ());
 			}
 		}
 	}
 
-	void ApplyDamage(int damage) {
+	void ApplyDamage (int damage) {
 		AudioSource.PlayClipAtPoint (struckSound, transform.position);
 
 		health -= damage;
@@ -104,7 +106,27 @@ public class PlayerHealth : MonoBehaviour {
 		return respawn0Pos;
 	}
 
-	void SlamInfo(Vector3 direction) {
+	void SlamInfo (Vector3 direction) {
 		slamDir = direction;
+	}
+
+	void OnTriggerEnter (Collider target) {
+		if (target.tag == "Health") {
+			Destroy (target.gameObject);
+
+			health++;
+
+			AudioSource.PlayClipAtPoint (pickUpHealth, transform.position);
+
+//			GameplayController.instance.SetLife (health);
+		}
+
+		if (target.tag == "Fuel") {
+			Destroy (target.gameObject);
+
+//			GameplayController.instance.FuelCollected ();
+
+			AudioSource.PlayClipAtPoint (pickUpFuel, transform.position);
+		}
 	}
 }

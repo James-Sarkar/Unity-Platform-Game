@@ -33,11 +33,11 @@ public class Respawn : MonoBehaviour {
 		respawnLight = transform.Find ("RSSpotlight").GetComponent<Light> ();
 	}
 
-	void Start() {
+	void Start () {
 		SetActive ();
 	}
 
-	void SetActive() {
+	void SetActive () {
 		activeEmitter.emit = true;
 
 		inactiveEmitter.emit = false;
@@ -49,7 +49,7 @@ public class Respawn : MonoBehaviour {
 		audioManager.Play ();
 	}
 
-	void SetInactive() {
+	void SetInactive () {
 		activeEmitter.emit = false;
 
 		inactiveEmitter.emit = true;
@@ -59,11 +59,11 @@ public class Respawn : MonoBehaviour {
 		audioManager.Stop ();
 	}
 
-	public void ActivateFireFX() {
+	public void ActivateFireFX () {
 		StartCoroutine (FireEffect ());
 	}
 
-	IEnumerator FireEffect() {
+	IEnumerator FireEffect () {
 		respawnEmitter0.Emit ();
 
 		respawnEmitter1.Emit ();
@@ -81,7 +81,7 @@ public class Respawn : MonoBehaviour {
 		respawnLight.intensity = 2f;
 	}
 
-	void OnTriggerEnter(Collider target) {
+	void OnTriggerEnter (Collider target) {
 		if (target.tag == "Player") {
 			AudioSource.PlayClipAtPoint (sfxRespawnActivate, transform.position, sfxVolume);
 

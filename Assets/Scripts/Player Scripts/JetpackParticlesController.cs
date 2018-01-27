@@ -30,11 +30,11 @@ public class JetpackParticlesController : MonoBehaviour {
 		jetLight.enabled = false;
 	}
 
-	void Start() {
+	void Start () {
 		StartCoroutine (StartEmission ());
 	}
 
-	IEnumerator StartEmission() {
+	IEnumerator StartEmission () {
 		while (true) {
 			if (playerController.IsJumping ()) {
 				if (!audioManager.isPlaying) {

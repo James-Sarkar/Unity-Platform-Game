@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour {
 		ApplyJumping ();
 	}
 
-	void UpdateSmoothMovementDirection() {
+	void UpdateSmoothMovementDirection () {
 		Vector3 forward = cameraTransform.TransformDirection (Vector3.forward);
 
 		forward.y = 0f;
@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void ApplyGravity() {
+	void ApplyGravity () {
 		if (isControllable) {
 			bool jumpButton = Input.GetButton ("Jump"),
 			controlledDescent = canControlDescent && verticalSpeed <= 0.0f && jumpButton && jumping;
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void ApplyJumping() {
+	void ApplyJumping () {
 		if (lastJumpTime + jumpRepeatTime > Time.time) {
 			return;
 		}
@@ -205,11 +205,11 @@ public class PlayerController : MonoBehaviour {
 		lastJumpButtonTime = -10f;
 	}
 
-	bool IsGrounded() {
+	bool IsGrounded () {
 		return (collisionFlags & CollisionFlags.CollidedBelow) != 0;
 	}
 
-	public bool IsJumping() {
+	public bool IsJumping () {
 		return jumping && !slammed;
 	}
 
@@ -218,26 +218,26 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// These are for animation
-	public float GetSpeed() {
+	public float GetSpeed () {
 		return moveSpeed;
 	}
 
-	public bool IsControlledDescent() {
+	public bool IsControlledDescent () {
 		bool jumpBtn = Input.GetButton ("Jump");
 
 		return canControlDescent && verticalSpeed <= 0.0f && jumpBtn && jumping;
 	}
 
-	public bool HasJumpReachedApex() {
+	public bool HasJumpReachedApex () {
 		return jumpingReachedApex;
 	}
 
-	public bool IsGroundedWithTimer() {
+	public bool IsGroundedWithTimer () {
 		return lastGroundedTime + groundedTimeout > Time.time;
 	}
 
 	// When the robots hit the player
-	void Slam(Vector3 direction) {
+	void Slam (Vector3 direction) {
 		verticalSpeed = CalculateJumpVerticalSpeed (1f);
 
 		inAirVelocity = direction * 6f;
@@ -255,12 +255,12 @@ public class PlayerController : MonoBehaviour {
 		DidJump ();
 	}
 
-	public bool IsMoving() {
+	public bool IsMoving () {
 		return Mathf.Abs (Input.GetAxisRaw ("Vertical")) + 
 			Mathf.Abs (Input.GetAxisRaw ("Horizontal")) > 0.5f;
 	}
 
-	public void SuperJump(float height) {
+	public void SuperJump (float height) {
 		verticalSpeed = CalculateJumpVerticalSpeed (height);
 
 		collisionFlags = CollisionFlags.None;
@@ -269,13 +269,13 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	// To hide the player
-	void HidePlayer() {
+	void HidePlayer () {
 		playerRenderer.enabled = false;
 
 		isControllable = false;
 	}
 
-	void ShowPlayer() {
+	void ShowPlayer () {
 		playerRenderer.enabled = true;
 
 		isControllable = true;
